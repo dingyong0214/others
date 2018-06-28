@@ -1,0 +1,392 @@
+准备工作：
+
+首先你需要一个github账号，所有还没有的话先去注册吧！https://github.com/
+我们使用git需要先安装git工具，这里给出下载地址，下载后一路直接安装即可：https://git-for-windows.github.io/
+
+1.进入Github首页，点击New repository新建一个项目
+
+2.填写相应信息后点击create即可 
+Repository name: 仓库名称
+Description(可选): 仓库描述介绍
+Public, Private : 仓库权限（公开共享，私有或指定合作者）
+Initialize this repository with a README: 添加一个README.md
+gitignore: 不需要进行版本管理的仓库类型，对应生成文件.gitignore
+license: 证书类型，对应生成文件LICENSE
+
+3.进入项目，点击Clone or dowload会出现一个地址，copy这个地址备用。
+
+4.接下来就到本地操作了，首先右键你的项目，如果你之前安装git成功的话，右键会出现两个新选项，分别为Git Gui Here,Git Bash Here,这里我们选择Git Bash Here，进入如下界面，Finance即为我的项目名。如果右键未出现选项请找到安装目录 下 选择 Git Bash
+
+5.首先找到代码盘
+$ cd G:
+
+6.接下来输入如下代码（关键步骤），把github上面的仓库克隆到本地
+$ git clone https://github.com/dingyong0214/Finance.git （该地址为第三步复制的地址）
+
+
+ 7.这个步骤以后你的本地项目文件夹下面就会多出个文件夹，该文件夹名即为你github上面的项目名，我多出了个Finance文件夹，我们把本地项目文件夹下的所有文件，都复制到那个新多出的文件夹下。
+
+8.接着继续输入命令 cd Finance，进入Finance文件夹
+
+9.接下来依次输入以下代码即可完成其他剩余操作：
+
+git add .        （注：别忘记后面的.，此操作是把Finance文件夹下面的文件都添加进来）
+
+git commit  -m  "提交信息"  （注：“提交信息”里面换成你需要，如“first commit”）
+
+git push -u origin master   （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码）
+
+git status  # 查看git状态
+
+10.如果是第一次操作可能会出现让你设置用户名和邮箱地址：请执行一下命令设置：
+
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+
+执行 git config --list 可查看配置信息，如果成功则会显示先关信息
+
+
+#########################== 以下是操作步骤== ########################
+
+Administrator@PC-20170829PAEP MINGW64 ~
+$ cd G:
+
+Administrator@PC-20170829PAEP MINGW64 /g
+$ git clone https://github.com/dingyong0214/Finance.git
+Cloning into 'Finance'...
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+Administrator@PC-20170829PAEP MINGW64 /g
+$ cd Finance
+
+Administrator@PC-20170829PAEP MINGW64 /g/Finance (master)
+$ git add .
+warning: LF will be replaced by CRLF in .babelrc.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in .editorconfig.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in .postcssrc.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in config/dev.env.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in config/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in config/prod.env.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in package.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/App.vue.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/common/font/iconfont.svg.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/common/js/md5.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/components/user/contactUs/contactUs.vue.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/components/user/fssOperating/fssOperating.vue.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/components/user/more/more.vue.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/main.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in src/router/index.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in static/css/mui.min.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in static/js/mui.min.js.
+The file will have its original line endings in your working directory.
+
+Administrator@PC-20170829PAEP MINGW64 /g/Finance (master)
+$ git commit  -m  "Vue SPA"
+[master b04ca99] Vue SPA
+ 258 files changed, 60989 insertions(+)
+ create mode 100644 .babelrc
+ create mode 100644 .editorconfig
+ create mode 100644 .gitignore
+ create mode 100644 .postcssrc.js
+ create mode 100644 .project
+ create mode 100644 README.md
+ create mode 100644 config/dev.env.js
+ create mode 100644 config/index.js
+ create mode 100644 config/prod.env.js
+ create mode 100644 index.html
+ create mode 100644 package.json
+ create mode 100644 src/App.vue
+ create mode 100644 src/common/components/auth/auth.vue
+ create mode 100644 src/common/components/calendar/calendar.vue
+ create mode 100644 src/common/components/tabs/tabs.vue
+ create mode 100644 src/common/components/tips/tips.vue
+ create mode 100644 src/common/components/xieyi/Authorize.vue
+ create mode 100644 src/common/components/xieyi/loanContract.vue
+ create mode 100644 src/common/components/xieyi/monthProtocol.vue
+ create mode 100644 src/common/components/xieyi/regProtocol.vue
+ create mode 100644 src/common/components/xieyi/riskNote.vue
+ create mode 100644 src/common/components/xieyi/transferProtocol.vue
+ create mode 100644 src/common/components/xieyi/yearProtocol.vue
+ create mode 100644 src/common/font/iconfont.eot
+ create mode 100644 src/common/font/iconfont.svg
+ create mode 100644 src/common/font/iconfont.ttf
+ create mode 100644 src/common/font/iconfont.woff
+ create mode 100644 src/common/js/cityData.js
+ create mode 100644 src/common/js/md5.min.js
+ create mode 100644 src/common/scss/base.scss
+ create mode 100644 src/common/scss/icon.scss
+ create mode 100644 src/common/scss/index.scss
+ create mode 100644 src/common/scss/mixin.scss
+ create mode 100644 src/common/scss/reset.scss
+ create mode 100644 src/common/scss/tender.scss
+ create mode 100644 src/components/assets/assets/assets.vue
+ create mode 100644 src/components/assets/assets/background.png
+ create mode 100644 src/components/assets/assetsRecords/assetsRecords.vue
+ create mode 100644 src/components/assets/repayList/repayList.vue
+ create mode 100644 src/components/assets/repayList/user-bg.png
+ create mode 100644 src/components/assets/xieyi/xieyi.vue
+ create mode 100644 src/components/bank/authExplain/authExplain.vue
+ create mode 100644 src/components/bank/bankOfYibin/background.png
+ create mode 100644 src/components/bank/bankOfYibin/bankOfYibin.vue
+ create mode 100644 src/components/bank/bankOfYibin/banner.png
+ create mode 100644 src/components/bank/bankOfYibin/float.png
+ create mode 100644 src/components/bank/bankOfYibin/house.png
+ create mode 100644 src/components/bank/bankOfYibin/logo-1.png
+ create mode 100644 src/components/bank/bankOfYibin/logo-2.png
+ create mode 100644 src/components/bank/bankOfYibin/logo-3.png
+ create mode 100644 src/components/bank/bankOfYibin/process.png
+ create mode 100644 src/components/bank/bindBankCard/bindBankCard.vue
+ create mode 100644 src/components/bank/businessAuth/businessAuth.vue
+ create mode 100644 src/components/bank/businessOpening/businessOpening.vue
+ create mode 100644 src/components/bank/checkPayPassword/checkPayPassword.vue
+ create mode 100644 src/components/bank/modifyPayPwd/modifyPayPwd.vue
+ create mode 100644 src/components/bank/notice/background.png
+ create mode 100644 src/components/bank/notice/img.png
+ create mode 100644 src/components/bank/notice/notice.vue
+ create mode 100644 src/components/bank/openingAccount/openingAccount.vue
+ create mode 100644 src/components/bank/openingProtocol/openingProtocol.vue
+ create mode 100644 src/components/bank/openingSuccess/openingSuccess.vue
+ create mode 100644 src/components/bank/personalOpening/personalOpening.vue
+ create mode 100644 src/components/bank/resetPayPwd/resetPayPwd.vue
+ create mode 100644 src/components/bank/setPayPwd/setPayPwd.vue
+ create mode 100644 src/components/bank/tradePwd/tradePwd.vue
+ create mode 100644 src/components/bank/unbindCardCallBack/unbindCardCallBack.vue
+ create mode 100644 src/components/help/help/help-1.png
+ create mode 100644 src/components/help/help/help-2.png
+ create mode 100644 src/components/help/help/help-3.png
+ create mode 100644 src/components/help/help/help-4.png
+ create mode 100644 src/components/help/help/help-5.png
+ create mode 100644 src/components/help/help/help-6.png
+ create mode 100644 src/components/help/help/help.vue
+ create mode 100644 src/components/help/helpCont/helpCont.vue
+ create mode 100644 src/components/help/helpList/helpList.vue
+ create mode 100644 src/components/home/beginner/beginner.vue
+ create mode 100644 src/components/home/beginner/user-bg.png
+ create mode 100644 src/components/home/home/banner.png
+ create mode 100644 src/components/home/home/home.vue
+ create mode 100644 src/components/home/home/icon-1.png
+ create mode 100644 src/components/home/home/icon-2.png
+ create mode 100644 src/components/home/home/icon-3.png
+ create mode 100644 src/components/home/home/icon-4.png
+ create mode 100644 src/components/home/info/info.png
+ create mode 100644 src/components/home/info/info.vue
+ create mode 100644 src/components/home/infoDetail/infoDetail.vue
+ create mode 100644 src/components/home/information/after-1.png
+ create mode 100644 src/components/home/information/after-2.png
+ create mode 100644 src/components/home/information/after-3.png
+ create mode 100644 src/components/home/information/after-4.png
+ create mode 100644 src/components/home/information/appewm.png
+ create mode 100644 src/components/home/information/beianbgs.png
+ create mode 100644 src/components/home/information/business-1.png
+ create mode 100644 src/components/home/information/business-2.png
+ create mode 100644 src/components/home/information/business-3.png
+ create mode 100644 src/components/home/information/business-4.png
+ create mode 100644 src/components/home/information/business-5.png
+ create mode 100644 src/components/home/information/business-6.png
+ create mode 100644 src/components/home/information/convoy-1.png
+ create mode 100644 src/components/home/information/convoy-2.png
+ create mode 100644 src/components/home/information/convoy-3.png
+ create mode 100644 src/components/home/information/convoy-4.png
+ create mode 100644 src/components/home/information/honnor-1.png
+ create mode 100644 src/components/home/information/honnor-2.png
+ create mode 100644 src/components/home/information/honnor-3.png
+ create mode 100644 src/components/home/information/honnor-4.png
+ create mode 100644 src/components/home/information/information.vue
+ create mode 100644 src/components/home/information/legal.png
+ create mode 100644 src/components/home/information/mission-1.png
+ create mode 100644 src/components/home/information/mission-2.png
+ create mode 100644 src/components/home/information/mode.png
+ create mode 100644 src/components/home/information/partner-1.png
+ create mode 100644 src/components/home/information/partner-2.png
+ create mode 100644 src/components/home/information/promise.png
+ create mode 100644 src/components/home/information/right.png
+ create mode 100644 src/components/home/information/risk-icon1.png
+ create mode 100644 src/components/home/information/senseofworth.png
+ create mode 100644 src/components/home/information/sort-1.png
+ create mode 100644 src/components/home/information/sort-2.png
+ create mode 100644 src/components/home/information/sort-3.png
+ create mode 100644 src/components/home/information/sort-4.png
+ create mode 100644 src/components/home/information/staff-1.png
+ create mode 100644 src/components/home/information/staff-2.png
+ create mode 100644 src/components/home/information/staff-3.png
+ create mode 100644 src/components/home/information/staff-4.png
+ create mode 100644 src/components/home/information/structure.png
+ create mode 100644 src/components/home/information/team-1.png
+ create mode 100644 src/components/home/information/team-2.png
+ create mode 100644 src/components/home/information/team-3.png
+ create mode 100644 src/components/home/information/team-4.png
+ create mode 100644 src/components/home/information/team-5.png
+ create mode 100644 src/components/home/information/team-6.png
+ create mode 100644 src/components/home/information/team-7.png
+ create mode 100644 src/components/home/information/warning-1.png
+ create mode 100644 src/components/home/information/warning-2.png
+ create mode 100644 src/components/home/information/warning-3.png
+ create mode 100644 src/components/home/information/warning-4.png
+ create mode 100644 src/components/home/information/wxewm.png
+ create mode 100644 src/components/home/information/zizhi-1.png
+ create mode 100644 src/components/home/information/zizhi-2.png
+ create mode 100644 src/components/home/legislation/legislation.vue
+ create mode 100644 src/components/home/manage/banner.jpg
+ create mode 100644 src/components/home/manage/manage.vue
+ create mode 100644 src/components/home/security/banner.png
+ create mode 100644 src/components/home/security/hand.png
+ create mode 100644 src/components/home/security/house.png
+ create mode 100644 src/components/home/security/info-1.png
+ create mode 100644 src/components/home/security/info-2.png
+ create mode 100644 src/components/home/security/info-3.png
+ create mode 100644 src/components/home/security/info-4.png
+ create mode 100644 src/components/home/security/logo.png
+ create mode 100644 src/components/home/security/risk-1.png
+ create mode 100644 src/components/home/security/risk-2.png
+ create mode 100644 src/components/home/security/risk-3.png
+ create mode 100644 src/components/home/security/risk-4.png
+ create mode 100644 src/components/home/security/san.png
+ create mode 100644 src/components/home/security/security.vue
+ create mode 100644 src/components/invest/addInvest/addInvest.vue
+ create mode 100644 src/components/invest/investDetail/data.png
+ create mode 100644 src/components/invest/investDetail/investDetail.vue
+ create mode 100644 src/components/invest/investDetail/user-bg.png
+ create mode 100644 src/components/invest/investMsg/investMsg.vue
+ create mode 100644 src/components/invest/investRecording/icon-1.png
+ create mode 100644 src/components/invest/investRecording/icon-2.png
+ create mode 100644 src/components/invest/investRecording/icon-3.png
+ create mode 100644 src/components/invest/investRecording/icon-4.png
+ create mode 100644 src/components/invest/investRecording/img.png
+ create mode 100644 src/components/invest/investRecording/investRecording.vue
+ create mode 100644 src/components/invest/investText/investText.vue
+ create mode 100644 src/components/invest/investment/investment.vue
+ create mode 100644 src/components/invest/tenderList/tenderList.vue
+ create mode 100644 src/components/passport/findPassword/findPassword.vue
+ create mode 100644 src/components/passport/login/login.vue
+ create mode 100644 src/components/passport/login/my-logo.png
+ create mode 100644 src/components/passport/login/qq.png
+ create mode 100644 src/components/passport/login/wx.png
+ create mode 100644 src/components/passport/loginBind/loginBind.vue
+ create mode 100644 src/components/passport/modifyOauth/modifyOauth.vue
+ create mode 100644 src/components/passport/oauthLogin/oauthLogin.vue
+ create mode 100644 src/components/passport/regStart/reg.png
+ create mode 100644 src/components/passport/regStart/regStart.vue
+ create mode 100644 src/components/passport/register/register.vue
+ create mode 100644 src/components/passport/sureOauth/sureOauth.vue
+ create mode 100644 src/components/user/about/about.vue
+ create mode 100644 src/components/user/about/banner.png
+ create mode 100644 src/components/user/ace/ace.vue
+ create mode 100644 src/components/user/aceDesc/aceDesc.vue
+ create mode 100644 src/components/user/addAutoTender/addAutoTender.vue
+ create mode 100644 src/components/user/address/address.vue
+ create mode 100644 src/components/user/appDown/appDown.vue
+ create mode 100644 src/components/user/appDown/bg-1.png
+ create mode 100644 src/components/user/appDown/bg-2.png
+ create mode 100644 src/components/user/appDown/logo.png
+ create mode 100644 src/components/user/autoTender/autoTender.vue
+ create mode 100644 src/components/user/bankCard/bankCard.vue
+ create mode 100644 src/components/user/contactUs/contactUs.vue
+ create mode 100644 src/components/user/coupon/coupon.vue
+ create mode 100644 src/components/user/coupon/hb-gray.png
+ create mode 100644 src/components/user/coupon/hb.png
+ create mode 100644 src/components/user/editAddress/editAddress.vue
+ create mode 100644 src/components/user/fss/fss.vue
+ create mode 100644 src/components/user/fssOperating/fssOperating.vue
+ create mode 100644 src/components/user/invite/invite.vue
+ create mode 100644 src/components/user/loanApply/loanApply.vue
+ create mode 100644 src/components/user/message/message.vue
+ create mode 100644 src/components/user/more/logo.png
+ create mode 100644 src/components/user/more/more.vue
+ create mode 100644 src/components/user/msgDetail/msgDetail.vue
+ create mode 100644 src/components/user/myData/myData.vue
+ create mode 100644 src/components/user/myLoan/myLoan.vue
+ create mode 100644 src/components/user/myTransfer/myTransfer.vue
+ create mode 100644 src/components/user/opinion/opinion.vue
+ create mode 100644 src/components/user/payCalendar/payCalendar.vue
+ create mode 100644 src/components/user/payCalendarDTL/payCalendarDTL.vue
+ create mode 100644 src/components/user/pushSms/pushSms.vue
+ create mode 100644 src/components/user/recharge/recharge.vue
+ create mode 100644 src/components/user/recording/recording.vue
+ create mode 100644 src/components/user/repayCalendar/repayCalendar.vue
+ create mode 100644 src/components/user/repayCalendarDTL/repayCalendarDTL.vue
+ create mode 100644 src/components/user/repayDetail/repayDetail.vue
+ create mode 100644 src/components/user/reward/reward.vue
+ create mode 100644 src/components/user/riskTest/riskTest.vue
+ create mode 100644 src/components/user/safetyCode/safetyCode.vue
+ create mode 100644 src/components/user/set/set.vue
+ create mode 100644 src/components/user/setLoginPassword/setLoginPassword.vue
+ create mode 100644 src/components/user/setTel/setTel.vue
+ create mode 100644 src/components/user/share/share.vue
+ create mode 100644 src/components/user/text/text.vue
+ create mode 100644 src/components/user/transfer/transfer.vue
+ create mode 100644 src/components/user/transferDetail/transferDetail.vue
+ create mode 100644 src/components/user/user/bankBanner.png
+ create mode 100644 src/components/user/user/imgAuth.png
+ create mode 100644 src/components/user/user/imgCard.png
+ create mode 100644 src/components/user/user/imgPwd.png
+ create mode 100644 src/components/user/user/imgSafety.png
+ create mode 100644 src/components/user/user/user-bg.png
+ create mode 100644 src/components/user/user/user.vue
+ create mode 100644 src/components/user/withdraw/withdraw.vue
+ create mode 100644 src/main.js
+ create mode 100644 src/router/index.js
+ create mode 100644 static/.gitkeep
+ create mode 100644 static/css/mui.min.css
+ create mode 100644 static/css/mui.picker.min.css
+ create mode 100644 static/fonts/mui.ttf
+ create mode 100644 static/fonts/qhlead.ttf
+ create mode 100644 static/fonts/upload.ttf
+ create mode 100644 static/img/1.png
+ create mode 100644 static/img/2.png
+ create mode 100644 static/img/3.png
+ create mode 100644 static/img/4.png
+ create mode 100644 static/img/5.png
+ create mode 100644 static/img/bankLogo.png
+ create mode 100644 static/img/banner.png
+ create mode 100644 static/img/my-logo.png
+ create mode 100644 static/js/iconfont.js
+ create mode 100644 static/js/mui.min.js
+ create mode 100644 static/js/mui.picker.min.js
+
+Administrator@PC-20170829PAEP MINGW64 /g/Finance (master)
+$ git push -u origin master
+Enumerating objects: 371, done.
+Counting objects: 100% (371/371), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (297/297), done.
+Writing objects: 100% (370/370), 3.79 MiB | 37.00 KiB/s, done.
+Total 370 (delta 15), reused 0 (delta 0)
+remote: Resolving deltas: 100% (15/15), done.
+To https://github.com/dingyong0214/Finance.git
+   87e2404..b04ca99  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Administrator@PC-20170829PAEP MINGW64 /g/Finance (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Administrator@PC-20170829PAEP MINGW64 /g/Finance (master)
+$
