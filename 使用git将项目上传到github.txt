@@ -38,15 +38,15 @@ git push -u origin master   （注：此操作目的是把本地仓库push到github上面，此步骤
 
 git status  # 查看git状态
 
-10.如果是第一次操作可能会出现让你设置用户名和邮箱地址：请执行一下命令设置：
+10.如果是第一次操作可能会出现让你设置用户名和邮箱地址：请执行以下命令设置：
 
 git config --global user.name "Your Name"
 git config --global user.email "email@example.com"
 
-执行 git config --list 可查看配置信息，如果成功则会显示先关信息
+执行 git config --list 可查看配置信息，如果成功则会显示相关信息
 
 
-#########################== 以下是操作步骤== ########################
+##################== 以下是操作步骤== ####################
 
 Administrator@PC-20170829PAEP MINGW64 ~
 $ cd G:
